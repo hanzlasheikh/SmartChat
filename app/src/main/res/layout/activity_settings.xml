@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".SettingsActivity">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/settings_iamge"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:src="@drawable/contacts_icon" />
+
+    <TextView
+        android:id="@+id/settings_displayname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Display Name"
+        android:textSize="22sp"
+        android:layout_marginLeft="130dp"
+        android:textColor="#000000"
+        android:layout_marginTop="270dp"/>
+
+    <TextView
+        android:id="@+id/settings_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hi,There I am Using SmartChat"
+        android:textSize="15sp"
+        android:padding="3dp"
+        android:layout_marginLeft="80dp"
+        android:textColor="#000000"
+        android:layout_marginTop="310dp"/>
+
+    <Button
+        android:id="@+id/settings_imagebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="125dp"
+        android:background="#ffffff"
+        android:padding="10dp"
+        android:text="Change iamge"
+        android:textColor="@color/colorPrimary" />
+    <Button
+        android:id="@+id/settings_statusbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:background="@color/colorAccent"
+        android:padding="5dp"
+        android:text="Change Status"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

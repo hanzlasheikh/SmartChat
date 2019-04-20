@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "114515547834",
+    "firebase_url": "https://smartchat-ce772.firebaseio.com",
+    "project_id": "smartchat-ce772",
+    "storage_bucket": "smartchat-ce772.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114515547834:android:39813bdb3a8b8046",
+        "android_client_info": {
+          "package_name": "com.example.dell.smartchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "114515547834-fpr84010v582csa3ej3bnbjcduduhp9t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dell.smartchat",
+            "certificate_hash": "fa6ac964011f292365317cedf1b8fdd73573601a"
+          }
+        },
+        {
+          "client_id": "114515547834-l1ikch8d6oc4ouru1us043qs1vgf5cq5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBV5yZQF3LpTwCmHC7PI8fe-_oa97dtp_g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "114515547834-l1ikch8d6oc4ouru1us043qs1vgf5cq5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

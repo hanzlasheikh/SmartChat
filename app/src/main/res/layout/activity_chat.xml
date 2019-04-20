@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity"
+    android:background="#3333">
+
+    <include layout="@layout/app_bar_layout"
+        android:id="@+id/chat_appbar"/>
+    
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:id="@+id/message_swipe_layout"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="57dp">
+    
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/messages_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="57dp"></android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="10"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#fff">
+
+        <ImageButton
+            android:id="@+id/chat_add_btn"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/plus"
+            android:paddingTop="4dp"
+            android:layout_weight="1"
+          />
+
+        <EditText
+            android:id="@+id/chat_message_view"
+            android:padding="4dp"
+            android:hint="Enter Message Here"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="9"/>
+
+        <ImageButton
+            android:id="@+id/chat_send_btn"
+            android:layout_width="30dp"
+        android:layout_margin="5dp"
+            android:padding="1dp"
+
+            android:layout_height="match_parent"
+            android:src="@drawable/send"/>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

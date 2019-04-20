@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ProfileActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+            <ImageView
+                android:id="@+id/profile_imageView"
+                android:layout_width="match_parent"
+                android:src="@drawable/contacts_picture"
+                android:fitsSystemWindows="true"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+     <android.support.v7.widget.Toolbar
+         android:layout_width="match_parent"
+         android:layout_height="60dp"
+         app:layout_collapseMode="pin"
+         >
+         <TextView
+             android:id="@+id/profile_displayname"
+             android:layout_width="wrap_content"
+             android:text="Display Name"
+             android:padding="3dp"
+             android:textSize="20sp"
+             android:textColor="#fff"
+             android:layout_height="wrap_content"
+             />
+     </android.support.v7.widget.Toolbar>
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+
+    <TextView
+        android:id="@+id/profile_status"
+        android:padding="3dp"
+        android:layout_width="wrap_content"
+        android:text="Status...."
+
+        android:textSize="17sp"
+        android:layout_marginLeft="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="360dp"/>
+
+    <TextView
+        android:id="@+id/profile_totalfriends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_above="@+id/profile_requestbtn"
+        android:layout_marginLeft="130dp"
+       android:layout_marginBottom="5dp"
+        android:layout_marginRight="110dp"
+        android:padding="3dp"
+        android:text="Total Friends"
+        android:textSize="15sp"
+        />
+
+    <Button
+        android:id="@+id/profile_requestbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/profile_requestdeclinebtn"
+       android:layout_marginBottom="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/colorAccent"
+        android:padding="5dp"
+        android:layout_gravity="bottom"
+        android:text="Send  FRIEND  REQUEST"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/profile_requestdeclinebtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorAccent"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="DECLINE FRIEND REQUEST"
+        android:textColor="#fff" />
+
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:layout_marginBottom="231dp"
+        android:text="Welcome To SmartChat"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/start_signin_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="133dp"
+        android:background="@drawable/button_background"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:text="Already Have Account" />
+    <Button
+        android:id="@+id/start_reg_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/button_background2"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:padding="13dp"
+        android:text="Need A NEw Account" />
+
+</RelativeLayout>

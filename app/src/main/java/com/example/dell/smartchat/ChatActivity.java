@@ -3,14 +3,18 @@ package com.example.dell.smartchat;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
+
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,6 +23,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toolbar;
+
+
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -46,7 +52,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ChatActivity extends AppCompatActivity {
     private String mChatUser;
-    private android.support.v7.widget.Toolbar mChatToolbar;
+    private Toolbar mChatToolbar;
     private DatabaseReference mRootRef;
     private TextView mTitleview,mLastseenView;
     private FirebaseAuth mAuth;
@@ -84,12 +90,13 @@ public class ChatActivity extends AppCompatActivity {
 
         mChatToolbar=findViewById(R.id.chat_appbar);
 
-        setSupportActionBar(mChatToolbar);
+        setActionBar(mChatToolbar);
         ActionBar actionBar=getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setDisplayShowCustomEnabled(true);
         mChatUser=getIntent().getStringExtra("user_id");
         String userName=getIntent().getStringExtra("user_name");
+
       //  getSupportActionBar().setTitle(userName);
         LayoutInflater inflater=(LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View actionBarview=inflater.inflate(R.layout.chat_custom_bar,null);

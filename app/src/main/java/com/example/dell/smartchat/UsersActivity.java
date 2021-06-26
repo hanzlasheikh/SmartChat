@@ -2,15 +2,18 @@ package com.example.dell.smartchat;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -31,20 +34,19 @@ public class UsersActivity extends AppCompatActivity {
     private DatabaseReference mUserRef;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_users);
         mAuth = FirebaseAuth.getInstance();
-        if (mAuth.getCurrentUser()!=null)
-        {mUserRef=FirebaseDatabase.getInstance().getReference().child("Users").child(mAuth.getCurrentUser().getUid());}
-        mUsersDatabase=FirebaseDatabase.getInstance().getReference().child("Users");
+        if (mAuth.getCurrentUser() != null) {
+            mUserRef = FirebaseDatabase.getInstance().getReference().child("Users").child(mAuth.getCurrentUser().getUid());
+        }
+        mUsersDatabase = FirebaseDatabase.getInstance().getReference().child("Users");
 
 
-
-        mUsersList=findViewById(R.id.users_recyclerView);
-        mToolbar=findViewById(R.id.users_appbar);
+        mUsersList = findViewById(R.id.users_recyclerView);
+        mToolbar = findViewById(R.id.users_appbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("All Users");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -59,28 +61,27 @@ public class UsersActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
-            mUserRef.child("online").setValue("true");
+        mUserRef.child("online").setValue("true");
 
-        FirebaseRecyclerAdapter<Users,UsersViewHolder> firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<Users, UsersViewHolder>(
+        FirebaseRecyclerAdapter<Users, UsersViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Users, UsersViewHolder>(
                 Users.class,
                 R.layout.users_single_layout,
                 UsersViewHolder.class,
                 mUsersDatabase
 
-        )
-        {
+        ) {
             @Override
             protected void populateViewHolder(UsersViewHolder viewHolder, Users users, int position) {
                 viewHolder.setName(users.getName());
                 viewHolder.setStatus(users.getStatus());
-                viewHolder.setImage(users.getThumb_image(),UsersActivity.this);
-                final String user_id=getRef(position).getKey();
+                viewHolder.setImage(users.getThumb_image(), UsersActivity.this);
+                final String user_id = getRef(position).getKey();
 
                 viewHolder.mView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent profileIntent=new Intent(UsersActivity.this,ProfileActivity.class);
-                        profileIntent.putExtra("user_id",user_id);
+                        Intent profileIntent = new Intent(UsersActivity.this, ProfileActivity.class);
+                        profileIntent.putExtra("user_id", user_id);
                         startActivity(profileIntent);
 
                     }
@@ -92,28 +93,28 @@ public class UsersActivity extends AppCompatActivity {
         mUsersList.setAdapter(firebaseRecyclerAdapter);
     }
 
-    public  static class UsersViewHolder extends RecyclerView.ViewHolder {
+    public static class UsersViewHolder extends RecyclerView.ViewHolder {
         View mView;
+
         public UsersViewHolder(@NonNull View itemView) {
             super(itemView);
-            mView=itemView;
+            mView = itemView;
         }
-        public void setName(String name)
-        {
-            TextView nameView=mView.findViewById(R.id.users_single_name);
+
+        public void setName(String name) {
+            TextView nameView = mView.findViewById(R.id.users_single_name);
             nameView.setText(name);
 
         }
-        public void setStatus(String status)
-        {
-            TextView statusView=mView.findViewById(R.id.users_single_status);
+
+        public void setStatus(String status) {
+            TextView statusView = mView.findViewById(R.id.users_single_status);
             statusView.setText(status);
         }
-        public void setImage(String image, Context context)
-        {
-            CircleImageView imageView=mView.findViewById(R.id.users_single_image);
-            Glide.with(context).load(image).apply(RequestOptions.placeholderOf(R.drawable.contacts_icon).error(R.drawable.contacts_icon)).into(imageView);
 
+        public void setImage(String image, Context context) {
+            CircleImageView imageView = mView.findViewById(R.id.users_single_image);
+            Glide.with(context).load(image).apply(RequestOptions.placeholderOf(R.drawable.contacts_icon).error(R.drawable.contacts_icon)).into(imageView);
 
 
         }

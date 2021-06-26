@@ -1,24 +1,26 @@
 package com.example.dell.smartchat;
 
 import android.app.ProgressDialog;
-import android.support.annotation.NonNull;
-import android.support.design.widget.TextInputLayout;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class StatusActivity extends AppCompatActivity {
-    private android.support.v7.widget.Toolbar mToolbar;
+    private Toolbar mToolbar;
     private TextInputLayout mStatus;
     private Button mSavebtn;
     private DatabaseReference mStatusdatabase;
@@ -36,7 +38,7 @@ public class StatusActivity extends AppCompatActivity {
         mSavebtn=findViewById(R.id.status_change_button);
         mProgress=new ProgressDialog(this);
         mToolbar=findViewById(R.id.status_appbar);
-        setSupportActionBar(mToolbar);
+        setActionBar(mToolbar);
         getSupportActionBar().setTitle("Account Status");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

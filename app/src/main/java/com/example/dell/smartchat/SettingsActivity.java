@@ -4,14 +4,16 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -42,6 +44,7 @@ import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import id.zelory.compressor.Compressor;
+
 
 public class SettingsActivity extends AppCompatActivity {
     private DatabaseReference mUserDatabase;
@@ -172,12 +175,14 @@ public class SettingsActivity extends AppCompatActivity {
 
 
 
+
                             StorageReference filepath=mImageStorage.child("profile_images").child(current_user_id+".jpg");
                             filepath.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                 @Override
                                 public void onSuccess(Uri uri) {
                                   final   String download_url=uri.toString();
                                     try {
+
                                         Bitmap thumb_bitmap = new Compressor(SettingsActivity.this)
                                                 .setMaxHeight(200)
                                                 .setMaxWidth(200)

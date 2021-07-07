@@ -19,7 +19,7 @@
         android:textSize="22sp" />
 
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/login_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,13 +28,13 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="160dp">
 
-        <android.support.design.widget.TextInputEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/login_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,12 +43,12 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="210dp">
 
-        <android.support.design.widget.TextInputEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
             android:hint="Password" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/login_sign_in"

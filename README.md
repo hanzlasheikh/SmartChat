@@ -1,5 +1,6 @@
 # SmartChat
 SmartChat is a real-time one to one chat application built using Firebase Realtime Database.
+Note: Send Request feature is not fully active yet. If someone sends you a friend request then you may go to thier profile and press the accept request button to start chat with them.
 
 ## Features
 1. Login/Signup using Email (Firebase Authentication).

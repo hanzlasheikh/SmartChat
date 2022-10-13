@@ -9,7 +9,7 @@ SmartChat is a real-time one to one chat application built using Firebase Realti
 5. Send text & Images
 
 ## Screenshots
-<img src="images/Splash.png" width=250 height=500> <img src="images/Create Account.png" width=250 height=500> <img src="images/Profile.png" width=250 height=500>
+<img src="images/Splash2.png" width=250 height=500> <img src="images/Create Account.png" width=250 height=500> <img src="images/Profile.png" width=250 height=500>
 <br>
 <img src="images/All Users.png" width=250 height=500> <img src="images/Send Request.png" width=250 height=500> <img src="images/Chats Users.png" width=250 height=500>
 <br>

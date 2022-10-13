@@ -5,18 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
-    <include layout="@layout/app_bar_layout"
-        android:id="@+id/reg_toolbar"/>
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:layout_marginLeft="18dp"
-        android:text="Create a New Account"
-        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="Create a new account"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
-        android:textSize="22sp" />
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/reg_display_name"
@@ -28,10 +28,13 @@
         android:layout_marginTop="150dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:textSize="16sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:fontFamily="@font/poppinsregular"
             android:layout_alignTop="@+id/reg_display_name"
-            android:hint="Display Name" />
+            android:hint="Name" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -44,12 +47,17 @@
         android:layout_marginTop="210dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:textSize="16sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_marginBottom="15dp"
+            android:layout_marginHorizontal="20dp"
             android:hint="Email" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        app:passwordToggleEnabled="true"
         android:id="@+id/reg_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -59,9 +67,12 @@
         android:layout_marginTop="270dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:textSize="16sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_marginHorizontal="20dp"
             android:hint="Password" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -70,12 +81,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="38dp"
-        android:layout_marginBottom="190dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@id/reg_password"
+        android:background="@drawable/bg_btn_orange"
+        android:fontFamily="@font/poppinsregular"
+        android:paddingHorizontal="20dp"
         android:text="Create Account"
-        android:padding="10dp"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
-        android:background="@drawable/button_background" />
+        android:textAllCaps="false"
+        android:textColor="#ffffff" />
 </RelativeLayout>

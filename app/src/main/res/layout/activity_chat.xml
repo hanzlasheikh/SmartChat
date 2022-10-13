@@ -9,55 +9,63 @@
 
     <include layout="@layout/app_bar_layout"
         android:id="@+id/chat_appbar"/>
-    
+
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:layout_width="match_parent"
         android:id="@+id/message_swipe_layout"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="55dp"
         android:layout_marginBottom="57dp">
-    
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/messages_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="55dp"
-        android:layout_marginBottom="57dp"></androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messages_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="55dp"
+            android:layout_marginBottom="57dp"></androidx.recyclerview.widget.RecyclerView>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
     
     <LinearLayout
         android:layout_width="match_parent"
-        android:weightSum="10"
-        android:layout_height="60dp"
+        android:weightSum="11"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
         android:background="#fff">
 
-        <ImageButton
+        <Button
+            android:background="@color/colorPrimary"
+           android:drawableStart="@drawable/ic_plus"
             android:id="@+id/chat_add_btn"
-            android:layout_width="55dp"
+            android:layout_width="60dp"
             android:layout_height="match_parent"
-            android:src="@drawable/plus"
-            android:paddingTop="4dp"
+            android:paddingHorizontal="3dp"
             android:layout_weight="1"
           />
 
         <EditText
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:layout_marginHorizontal="2dp"
+            android:paddingStart="30dp"
+            android:background="@drawable/bg_edittext"
+            android:fontFamily="@font/poppinsregular"
             android:id="@+id/chat_message_view"
-            android:padding="4dp"
+            android:paddingHorizontal="4dp"
             android:hint="Enter Message Here"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="45dp"
             android:layout_weight="9"/>
 
-        <ImageButton
+        <Button
+           android:layout_weight="1"
             android:id="@+id/chat_send_btn"
-            android:layout_width="30dp"
-        android:layout_margin="5dp"
-            android:padding="1dp"
-
+            android:layout_width="50dp"
+            android:layout_marginLeft="2dp"
+            android:paddingHorizontal="3dp"
+            android:background="@color/colorPrimary"
             android:layout_height="match_parent"
-            android:src="@drawable/send"/>
+         android:drawableStart="@drawable/ic_send"/>
 
 
 

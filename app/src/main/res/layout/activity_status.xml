@@ -21,12 +21,16 @@
         android:layout_marginTop="143dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:textSize="16sp"
+            android:fontFamily="@font/poppinsregular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter New Status" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppinsregular"
         android:id="@+id/status_change_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,10 +38,10 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="214dp"
         android:layout_marginEnd="39dp"
+        android:background="@drawable/bg_btn_orange"
+      android:paddingHorizontal="20dp"
         android:text="Save Changes"
-        android:padding="5dp"
-        android:background="@color/colorAccent"
-        android:textColor="#ffffff"/>
+        android:textColor="#ffffff" />
 
 
 </RelativeLayout>

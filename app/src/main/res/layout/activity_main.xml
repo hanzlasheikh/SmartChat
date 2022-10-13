@@ -8,10 +8,14 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></com.google.android.material.appbar.AppBarLayout>
-    <include layout="@layout/app_bar_layout"
-        android:id="@+id/mainpage_toolbar"/>
+
+    <include
+        android:id="@+id/mainpage_toolbar"
+        layout="@layout/app_bar_layout" />
 
     <com.google.android.material.tabs.TabLayout
+        app:tabTextAppearance="@style/TabsFont"
+        app:tabTextColor="@color/white"
         android:id="@+id/main_tabs"
         android:layout_marginTop="55dp"
         android:layout_width="match_parent"

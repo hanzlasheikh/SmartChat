@@ -5,18 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".StartActivity"
-    android:background="@color/colorPrimary">
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/ic_launcher" />
 
     <TextView
+        android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
-        android:layout_marginBottom="231dp"
-        android:text="Welcome To SmartChat"
-        android:textSize="24sp" />
+        android:fontFamily="@font/poppinsmedium"
+        android:text="SmartChat"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/start_signin_button"
@@ -25,22 +34,31 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="133dp"
-        android:background="@drawable/button_background"
-        android:textColor="#ffffff"
-        android:textStyle="bold"
-        android:padding="8dp"
-        android:text="Already Have Account" />
+        android:background="@drawable/bg_btn_orange"
+        android:fontFamily="@font/poppinsregular"
+        android:paddingHorizontal="20dp"
+        android:text="Already have an account"
+        android:textAllCaps="false"
+        android:textColor="#ffffff" />
+
     <Button
         android:id="@+id/start_reg_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="60dp"
-        android:background="@drawable/button_background2"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimary"
-        android:padding="13dp"
-        android:text="Need A NEw Account" />
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/bg_btn_white"
+        android:fontFamily="@font/poppinsregular"
+        android:paddingHorizontal="20dp"
+        android:text="Need new account"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"/>
 
 </RelativeLayout>

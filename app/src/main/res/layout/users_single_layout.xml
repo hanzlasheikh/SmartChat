@@ -4,22 +4,25 @@
 
   <de.hdodenhof.circleimageview.CircleImageView
       android:id="@+id/users_single_image"
-      android:layout_width="100dp"
-      android:layout_height="100dp"
-      android:src="@drawable/contacts_icon"
-      android:layout_margin="10dp"
-      android:padding="5dp"/>
+      android:layout_width="60dp"
+      android:layout_height="60dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginBottom="10dp"
+      android:padding="5dp"
+      android:src="@drawable/contacts_picture" />
 
-    <TextView
-        android:id="@+id/users_single_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="141dp"
-        android:text="Display Name"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+  <TextView
+      android:id="@+id/users_single_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_marginStart="100dp"
+      android:layout_marginTop="15dp"
+      android:fontFamily="@font/poppinsmedium"
+      android:text="Display Name"
+      android:textSize="14sp" />
 
     <ImageView
         android:id="@+id/users_single_online_icon"
@@ -32,15 +35,24 @@
         android:visibility="invisible" />
 
 
-    <TextView
-        android:id="@+id/users_single_status"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="141dp"
-        android:text="Status....."
-        android:textSize="15sp"
-        android:textStyle="italic" />
+  <TextView
+      android:id="@+id/users_single_status"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_marginStart="100dp"
+      android:layout_marginTop="40dp"
+      android:fontFamily="@font/poppinsregular"
+      android:text="Status....."
+      android:textSize="12sp" />
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_below="@id/users_single_image"
+      android:layout_marginStart="100dp"
+      android:layout_marginTop="-10dp"
+      android:layout_marginEnd="20dp"
+      android:background="@color/gray" />
 
 </RelativeLayout>

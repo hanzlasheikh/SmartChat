@@ -8,6 +8,9 @@ SmartChat is a real-time one to one chat application built using Firebase Realti
 4. Chat with friends in real time
 5. Send text & Images
 
+## APK
+https://drive.google.com/file/d/1sS8s_t_by-_UFP-SnGCphuBvtNOsc9aN/view?usp=sharing
+
 ## Screenshots
 <img src="images/Splash2.png" width=250 height=500> <img src="images/Create Account.png" width=250 height=500> <img src="images/Profile.png" width=250 height=500>
 <br>
